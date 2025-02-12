@@ -122,7 +122,6 @@ button:active {
   grid-column: span 2;
 }
 
-/* Updated sound toggle styles */
 .sound-toggle-container {
   display: flex;
   align-items: center;
@@ -175,7 +174,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translate(22px, -50%);
+  transform: translate(18px, -50%);
 }
 
 .slider.round {
