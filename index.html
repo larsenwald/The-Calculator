@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Calculator</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>The Calculator</h1>
+
+    <div class="calculator">
+      <div class="display" id="display"></div>
+      <div class="buttons">
+        <button class="special" onclick="clearAll()">C</button>
+        <button class="special" onclick="handleBackspace()">⌫</button>
+        <button class="special" onclick="insertParens()">( )</button>
+        <button class="operator" onclick="insertOperator('/')">/</button>
+
+        <button onclick="insertNumber('7')">7</button>
+        <button onclick="insertNumber('8')">8</button>
+        <button onclick="insertNumber('9')">9</button>
+        <button class="operator" onclick="insertOperator('*')">×</button>
+
+        <button onclick="insertNumber('4')">4</button>
+        <button onclick="insertNumber('5')">5</button>
+        <button onclick="insertNumber('6')">6</button>
+        <button class="operator" onclick="insertOperator('-')">-</button>
+
+        <button onclick="insertNumber('1')">1</button>
+        <button onclick="insertNumber('2')">2</button>
+        <button onclick="insertNumber('3')">3</button>
+        <button onclick="insertOperator('+')">+</button>
+
+        <button onclick="moveCursor(-1)">←</button>
+        <button onclick="insertNumber('0')">0</button>
+        <button onclick="insertNumber('.')">.</button>
+        <button onclick="moveCursor(1)">→</button>
+
+        <button class="equals span-2" onclick="calculate()">=</button>
+      </div>
+    </div>
+
+    <p class="footer">made with ❤️ by Larsenwald</p>
+
+    <script src="index.js"></script>
+  </body>
+</html>
