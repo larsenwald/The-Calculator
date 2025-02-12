@@ -13,6 +13,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   gap: 2rem;
+  color: black;
 }
 
 h1 {
@@ -121,17 +122,71 @@ button:active {
   grid-column: span 2;
 }
 
-@media (max-width: 320px) {
-  body {
-    padding: 10px;
-  }
+/* Updated sound toggle styles */
+.sound-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  grid-column: span 2;
+}
 
-  .calculator {
-    padding: 15px;
-  }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
 
-  .display {
-    padding: 10px;
-    min-height: 50px;
-  }
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f0f0d8;
+  transition: 0.4s;
+  border: 3px solid #000;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffd700;
+  border: 2px solid #000;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #b3ffb3;
+}
+
+input:checked + .slider:before {
+  transform: translate(22px, -50%);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.sound-label {
+  font-size: 14px;
+  font-family: "Short Stack", cursive;
 }
