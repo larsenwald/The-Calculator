@@ -5,7 +5,7 @@ let isSoundEnabled = false;
 const sounds = {
   parentheses: new Audio('sounds/parentheses.mp3'),
   equals: new Audio('sounds/equals.mp3'),
-  pops: Array.from({length: 8}, (_, i) => new Audio(`sounds/pop${i + 1}.mp3`))
+  pops: Array.from({length: 6}, (_, i) => new Audio(`sounds/pop${i + 1}.mp3`))
 };
 
 document.getElementById('soundToggle').addEventListener('change', function(e) {
