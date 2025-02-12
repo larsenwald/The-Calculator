@@ -1,6 +1,6 @@
 let expression = [];
 let cursorPos = 0;
-let isSoundEnabled = true;
+let isSoundEnabled = false;
 
 const sounds = {
   parentheses: new Audio('sounds/parentheses.mp3'),
